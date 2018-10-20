@@ -1,5 +1,4 @@
 inno/
 packages/
 .vs/
-[Dd]ebug/
-[Rr]elease/
+MCStudio/bin/
