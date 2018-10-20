@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<list source="https://minecraft.gamepedia.com/Status_effect">
+  <effect>
+    <name>Absorption</name>
+    <desc>Absorbs damage</desc>
+    <id>absorption</id>
+  </effect>
+  <effect>
+    <name>Bad Luck</name>
+    <desc>Decreases chances of high-quality and more loot</desc>
+    <id>unluck</id>
+  </effect>
+  <effect>
+    <name>Blindness</name>
+    <desc>Impairs vision</desc>
+    <id>blindness</id>
+  </effect>
+  <effect>
+    <name>Conduit Power</name>
+    <desc>Increases underwater visibility and mining speed, prevents drowning</desc>
+    <id>conduit_power</id>
+  </effect>
+  <effect>
+    <name>Dolphin's Grace</name>
+    <desc>Increases swimming speed</desc>
+    <id>dolphins_grace</id>
+  </effect>
+  <effect>
+    <name>Fire Resistance</name>
+    <desc>Grants immunity to fire, lava, the direct impact of blaze fireballs and standing on magma blocks.</desc>
+    <id>fire_resistance</id>
+  </effect>
+  <effect>
+    <name>Glowing</name>
+    <desc>Outlines entities</desc>
+    <id>glowing</id>
+  </effect>
+  <effect>
+    <name>Haste</name>
+    <desc>Increases mining and attack speed.</desc>
+    <id>haste</id>
+  </effect>
+  <effect>
+    <name>Health Boost</name>
+    <desc>Increases maximum health</desc>
+    <id>health_boost</id>
+  </effect>
+  <effect>
+    <name>Hunger</name>
+    <desc>Increases hunger</desc>
+    <id>hunger</id>
+  </effect>
+  <effect>
+    <name>Instant Damage</name>
+    <desc>Damages entities, heals undead</desc>
+    <id>instant_damage</id>
+  </effect>
+  <effect>
+    <name>Instant Health</name>
+    <desc>Heals entities, damages undead</desc>
+    <id>instant_health</id>
+  </effect>
+  <effect>
+    <name>Invisibility</name>
+    <desc>Grants invisibility</desc>
+    <id>invisibility</id>
+  </effect>
+  <effect>
+    <name>Jump Boost</name>
+    <desc>Increases jump height and reduces fall damage</desc>
+    <id>jump_boost</id>
+  </effect>
+  <effect>
+    <name>Levitation</name>
+    <desc>Floats entities</desc>
+    <id>levitation</id>
+  </effect>
+  <effect>
+    <name>Luck</name>
+    <desc>Increases chances of high-quality and more loot</desc>
+    <id>luck</id>
+  </effect>
+  <effect>
+    <name>Mining Fatigue</name>
+    <desc>Reduces mining and attack speed</desc>
+    <id>mining_fatigue</id>
+  </effect>
+  <effect>
+    <name>Nausea</name>
+    <desc>Wobbles and warps the view</desc>
+    <id>nausea</id>
+  </effect>
+  <effect>
+    <name>Night Vision</name>
+    <desc>Improves vision in darkness</desc>
+    <id>night_vision</id>
+  </effect>
+  <effect>
+    <name>Poison</name>
+    <desc>Inflicts damage over time, reducing the player's health to half heart, and cannot kill</desc>
+    <id>poison</id>
+  </effect>
+  <effect>
+    <name>Regeneration</name>
+    <desc>Heals over time</desc>
+    <id>regeneration</id>
+  </effect>
+  <effect>
+    <name>Resistance</name>
+    <desc>Reduces most damage</desc>
+    <id>resistance</id>
+  </effect>
+  <effect>
+    <name>Saturation</name>
+    <desc>Replenishes hunger</desc>
+    <id>saturation</id>
+  </effect>
+  <effect>
+    <name>Slow Falling</name>
+    <desc>Decreases falling speed and negates all fall damage</desc>
+    <id>slow_falling</id>
+  </effect>
+  <effect>
+    <name>Slowness</name>
+    <desc>Decreases walking speed</desc>
+    <id>slowness</id>
+  </effect>
+  <effect>
+    <name>Speed</name>
+    <desc>Increases walking speed</desc>
+    <id>speed</id>
+  </effect>
+  <effect>
+    <name>Strength</name>
+    <desc>Increases melee damage</desc>
+    <id>strength</id>
+  </effect>
+  <effect>
+    <name>Water Breathing</name>
+    <desc>Prevents drowning</desc>
+    <id>water_breathing</id>
+  </effect>
+  <effect>
+    <name>Weakness</name>
+    <desc>Reduces melee damage given</desc>
+    <id>weakness</id>
+  </effect>
+  <effect>
+    <name>Wither</name>
+    <desc>Inflicts damage over time (and can kill)</desc>
+    <id>wither</id>
+  </effect>
+</list>

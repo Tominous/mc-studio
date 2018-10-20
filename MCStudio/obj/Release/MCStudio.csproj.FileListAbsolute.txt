@@ -1,0 +1,17 @@
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\data\autocomplete.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\data\effects.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\data\enchantments.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\data\json.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\data\mcfunction.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\MCStudio.exe
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\MCStudio.pdb
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\FastColoredTextBox.dll
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\TabStrip.dll
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\bin\Release\FastColoredTextBox.xml
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.Editor.resources
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.InputDialog.resources
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.NewFile.resources
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.Properties.Resources.resources
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.csproj.GenerateResource.Cache
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.exe
+C:\Users\Victor\documents\visual studio 2015\Projects\MCStudio\MCStudio\obj\Release\MCStudio.pdb
