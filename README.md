@@ -4,6 +4,8 @@ MCStudio is a simple function (mcfunction) and JSON editor for Minecraft. Suppor
 
 As an extra, MCStudio has a full list of the enchantments and effects up to the ones in 1.13, and a file explorer.
 
+![Screenshot](https://raw.githubusercontent.com/vic797/mc-studio/master/screenshot.png)
+
 ## Requirements
 
 This requires at least .Net Framework 4. It's included in Windows 8, 8.1 and 10. I don't know if this works with Mono since it uses some WinApi functions.
