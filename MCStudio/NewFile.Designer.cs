@@ -42,7 +42,7 @@
             this.cmlJson.Note = "Create a JSon or a mcmeta file";
             this.cmlJson.Size = new System.Drawing.Size(275, 50);
             this.cmlJson.TabIndex = 3;
-            this.cmlJson.Text = "New JSon file";
+            this.cmlJson.Text = "New JSON file";
             this.cmlJson.Click += new System.EventHandler(this.clJson_Click);
             // 
             // cmlFunction

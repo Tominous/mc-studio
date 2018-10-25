@@ -618,6 +618,7 @@
             this.Text = "MCStudio";
             this.Activated += new System.EventHandler(this.Editor_Activated);
             this.Deactivate += new System.EventHandler(this.Editor_Deactivate);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Editor_FormClosing);
             this.Load += new System.EventHandler(this.Editor_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

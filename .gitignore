@@ -2,3 +2,4 @@ inno/
 packages/
 .vs/
 MCStudio/bin/
+MCStudio/obj/

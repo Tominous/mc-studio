@@ -38,6 +38,9 @@ namespace MCStudio
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool GetWindowPlacement(IntPtr hWnd, ref Windowplacement lpwndpl);
 
+        [DllImport("user32.dll")]
+        static extern IntPtr GetForegroundWindow();
+
         private enum ShowWindowEnum
         {
             Hide = 0,
@@ -384,11 +387,20 @@ namespace MCStudio
 
         private void tabStrip_TabStripItemClosed(object sender, EventArgs e)
         {
-            statLine.Text = "Line: 0";
-            statChar.Text = "Character: 0";
-            statLength.Text = "Length: 0";
-            statSelection.Text = "Selection: 0 | 0";
-            Text = "MCStudio";
+            if (tabStrip.Items.Count != 0)
+            {
+                FastColoredTextBox fctb = (FastColoredTextBox)tabStrip.SelectedItem.Controls[0];
+                UpdateStats(fctb);
+                Fctb_SelectionChanged(fctb, new EventArgs());
+                Text = "MCStudio - " + tabStrip.SelectedItem.Title;
+            } else 
+            {
+                statLine.Text = "Line: 0";
+                statChar.Text = "Character: 0";
+                statLength.Text = "Length: 0";
+                statSelection.Text = "Selection: 0 | 0";
+                Text = "MCStudio";
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -463,6 +475,7 @@ namespace MCStudio
 
         private void Editor_Load(object sender, EventArgs e)
         {
+            CheckForIllegalCrossThreadCalls = false;
             LoadDrives();
             LoadEnchantments();
             LoadEffects();
@@ -472,6 +485,8 @@ namespace MCStudio
             hook.KeyPressed += Hook_KeyPressed;
             hook.Hook(Keys.N, MCStudio.ModifierKeys.Control);
             hook.Hook(Keys.O, MCStudio.ModifierKeys.Control);
+            hook.Hook(Keys.S, MCStudio.ModifierKeys.Control);
+            hook.Hook(Keys.W, MCStudio.ModifierKeys.Control);
             hook.Hook(Keys.S, MCStudio.ModifierKeys.Control | MCStudio.ModifierKeys.Shift);
             hook.Hook(Keys.W, MCStudio.ModifierKeys.Control | MCStudio.ModifierKeys.Shift);
             hook.Hook(Keys.F6);
@@ -480,6 +495,8 @@ namespace MCStudio
 
         private void Hook_KeyPressed(object sender, KeyPressedEventArgs e)
         {
+            if (GetForegroundWindow() != Handle)
+                return;
             if (e.Key == Keys.F6)
             {
                 if (btnSwitch.Enabled)
@@ -506,9 +523,12 @@ namespace MCStudio
                         Invoke((MethodInvoker)delegate ()
                        {
                            if (e.Modifiers.HasFlag(MCStudio.ModifierKeys.Shift))
-                               btnSaveAll.PerformClick();
+                               foreach (FATabStripItem item in tabStrip.Items)
+                               {
+                                   Save((FastColoredTextBox)item.Controls[0], false);
+                               }
                            else
-                               btnSave.PerformClick();
+                               Save((FastColoredTextBox)tabStrip.SelectedItem.Controls[0], false);
                        });
                         break;
                     case Keys.W:
@@ -669,7 +689,30 @@ namespace MCStudio
         {
             if (lstbRecents.SelectedItem != null)
             {
-                CreateEditor(Path.GetExtension(lstbRecents.SelectedItem.ToString()).Replace(".", ""), lstbRecents.SelectedItem.ToString());
+                string p = lstbRecents.SelectedItem.ToString();
+                if (File.Exists(p))
+                    CreateEditor(Path.GetExtension(p).Replace(".", ""), p);
+                else
+                    MessageBox.Show("File not found: " + p, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void Editor_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            foreach (FATabStripItem item in tabStrip.Items)
+            {
+                if (item.Title.Contains("*"))
+                {
+                    DialogResult result = MessageBox.Show(string.Format("\"{0}\" is not saved. Save it now?", item.Title), "Close", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        Save((FastColoredTextBox)item.Controls[0], false);
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                    }
+                }
             }
         }
 
